@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-width: 320px;
+  min-width: 32rem;
+  max-width: 1200px;
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+}

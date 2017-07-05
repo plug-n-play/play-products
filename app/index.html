@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body>
+
+    <main class="container">
+      <header class="cart-header">
+        <h1 class="cart-header__heading">Women's tops</h1>
+        <select id="cartHeaderFilter" class="cart-header__filter">
+          <option value="All">Filter by size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="L">L</option>
+          <option value="M">M</option>
+          <option value="XL">XL</option>
+        </select>
+      </header>
+      <section>
+        <ul id="cart" class="cart">
+          
+        </ul>
+      </section>      
+    </main>
+
+    <script id="cart-item-template" type="text/x-handlebars-template">
+      {{#each arr}}
+        <li class="cart-item">
+          <a href="#" class="cart-item-link">
+            <img src="images/products/{{productImage}}" alt="test" class="cart-item-picture">
+            <div class="cart-item-highlights">
+              {{#if isSale}}
+              <span class="cart-item-highlights-box cart-item-highlights__sale">Sale</span>
+              {{/if}}
+
+              {{#if isExclusive}}
+              <span class="cart-item-highlights-box cart-item-highlights__exclusive">Exclusive</span>
+              {{/if}}
+            </div>
+            <div class="cart-item-details">
+              <span class="cart-item__title">Product name</span>
+              <span class="cart-item__price">$15.00</span>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+    </script>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>
